@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+          integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+</head>
+<body>
+
+<div>
+    <h2>Mailing | <a href="/logout">logout</a></h2>
+    <form id="mailForm" class="pure-form">
+        <fieldset class="pure-group">
+            <input name="mailSubject" type="text" class="pure-input-1-2" placeholder="Subject">
+            <textarea name="mailContent" class="pure-input-1-2" placeholder="Content"></textarea>
+        </fieldset>
+        Number of mails:<input type="number" name="count" value="1" min="1" max="1000"><br><br>
+        <button id="sendBtn" type="submit" class="pure-button pure-input-1-2 pure-button-primary">Send</button>
+    </form>
+    <div id="info"></div>
+</div>
+
+<script>
+    const form = document.getElementById("mailForm");
+    const info = document.getElementById("info");
+    document.getElementById("sendBtn").addEventListener("click", (event) => {
+        event.preventDefault();
+        info.innerHTML = "Sending...";
+        const formObj = {
+            subject: form.elements.mailSubject.value,
+            content: form.elements.mailContent.value,
+            count: form.elements.count.value
+        };
+
+        console.log(formObj);
+
+        fetch('/api', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formObj),
+        })
+            .then(response => response.text())
+            .then((text) => {
+                info.innerHTML = text;
+            })
+            .catch(console.warn);
+    });
+</script>
+
+</body>
+</html>
