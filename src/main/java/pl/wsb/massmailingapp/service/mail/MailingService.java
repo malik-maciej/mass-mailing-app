@@ -35,6 +35,7 @@ public class MailingService {
             return Status.FAILURE;
         }
 
+        logger.info("Sent all mails");
         return Status.SUCCESS;
     }
 }

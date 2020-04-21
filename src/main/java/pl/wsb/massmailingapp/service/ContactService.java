@@ -27,7 +27,7 @@ class ContactService {
     }
 
     @EventListener(ApplicationReadyEvent.class)
-    private void addContactsFromFileToDb() {
+    public void addContactsFromFileToDb() {
         logger.info("Saving contacts from file to database...");
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(
@@ -41,6 +41,7 @@ class ContactService {
                 sb.append(System.lineSeparator());
                 line = br.readLine();
             }
+            logger.info("Saved all contacts");
         } catch (IOException e) {
             logger.error(e.toString());
         }
