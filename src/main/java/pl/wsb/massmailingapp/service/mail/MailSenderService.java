@@ -40,7 +40,7 @@ class MailSenderService {
       Response response = sendGrid.api(request);
       int httpStatus = response.getStatusCode();
       logger.info("STATUS CODE: " + httpStatus);
-      logger.info(("HEADERS: " + response.getHeaders()));
+      logger.info("HEADERS: " + response.getHeaders());
       logger.info("BODY: " + response.getBody());
 
       if (httpStatus != HttpStatus.OK.value() && httpStatus != HttpStatus.ACCEPTED.value()) {
