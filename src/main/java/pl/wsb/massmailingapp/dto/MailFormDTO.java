@@ -6,6 +6,12 @@ public class MailFormDTO {
     private String content;
     private int count;
 
+    public MailFormDTO(String subject, String content, int count) {
+        this.subject = subject;
+        this.content = content;
+        this.count = count;
+    }
+
     public String getSubject() {
         return subject;
     }

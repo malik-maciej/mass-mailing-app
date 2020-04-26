@@ -18,8 +18,8 @@ class ContactService {
 
     private final Logger logger = LoggerFactory.getLogger(ContactService.class);
 
-    private ContactRepository contactRepository;
-    private ResourceLoader resourceLoader;
+    private final ContactRepository contactRepository;
+    private final ResourceLoader resourceLoader;
 
     ContactService(ContactRepository contactRepository, ResourceLoader resourceLoader) {
         this.contactRepository = contactRepository;

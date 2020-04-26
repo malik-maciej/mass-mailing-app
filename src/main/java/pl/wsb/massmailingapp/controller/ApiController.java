@@ -9,7 +9,7 @@ import pl.wsb.massmailingapp.service.mail.MailingService;
 @RestController
 class ApiController {
 
-    private MailingService mailingService;
+    private final MailingService mailingService;
 
     ApiController(MailingService mailingService) {
         this.mailingService = mailingService;
