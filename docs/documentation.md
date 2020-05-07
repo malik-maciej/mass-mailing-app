@@ -49,6 +49,7 @@ management) oraz 100 0000 maili miesięcznie, ale już za 79.95 USD.
 który zapewnia uwierzytelnianie, autoryzację i inne funkcje bezpieczeństwa, dzięki czemu dodanie nowych funkcjonalności 
 np. rejestracji jest ułatwione. Inny z modułów - Spring Data umożliwia wygodne operacje na danych z bazy.
 * Uruchomiene w Dockerze zwalnia nas z konfigurowania środowiska.
+* Spring Boot oraz Maven pozwalają na łatwe budowanie projektu oraz proste zarządzanie pakietami.
 #### Minusy:
 * Brak wdrożenia bazy danych PostgreSQL.
 * Brak systemu rejestracji.
