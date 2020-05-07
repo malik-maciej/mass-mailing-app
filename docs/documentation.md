@@ -48,6 +48,7 @@ management) oraz 100 0000 maili miesięcznie, ale już za 79.95 USD.
 * Zastosowanie największego frameworka dostępnego dla Javy - Spring, wykorzystano z niego między innymi Spring Security, 
 który zapewnia uwierzytelnianie, autoryzację i inne funkcje bezpieczeństwa, dzięki czemu dodanie nowych funkcjonalności 
 np. rejestracji jest ułatwione. Inny z modułów - Spring Data umożliwia wygodne operacje na danych z bazy.
+* Uruchomiene w Dockerze zwalnia nas z konfigurowania środowiska.
 #### Minusy:
 * Brak wdrożenia bazy danych PostgreSQL.
 * Brak systemu rejestracji.
